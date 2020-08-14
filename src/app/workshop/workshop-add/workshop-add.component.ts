@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WorkshopModule } from '../workshop.module';
+import { WorkshopEntry } from '../shared/model/model';
 
 @Component({
   selector: 'ws-workshop-add',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkshopAddComponent implements OnInit {
 
+  entry: WorkshopEntry = {};
   constructor() { }
 
   ngOnInit(): void {
