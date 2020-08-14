@@ -2,18 +2,30 @@
   <mat-card-title>Add a new Entry</mat-card-title>
   <mat-card-content>
     <form #form="ngForm">
+
       <mat-form-field>
-        <input type="text" matInput placeholder="User" [(ngModel)]="entry.user" #user="ngModel" name="user">
+        <input type="text" matInput placeholder="User" 
+        [(ngModel)]="entry.user" #user="ngModel" name="user" required>
       </mat-form-field>
+
       <mat-form-field>
-        <input type="text" matInput placeholder="Workshop" [(ngModel)]="entry.workshop" #workshop="ngModel" name="workshop">
+        <input type="text" matInput placeholder="Workshop" 
+        [(ngModel)]="entry.workshop" #workshop="ngModel" 
+        name="workshop" required minlength="5">
       </mat-form-field>
+
       <mat-form-field>
-        <input type="text" matInput placeholder="Ticket Price" [(ngModel)]="entry.ticketPrice" #ticketPrice="ngModel" name="ticketPrice">
+        <input type="text" matInput placeholder="Ticket Price" 
+        [(ngModel)]="entry.ticketPrice" #ticketPrice="ngModel" 
+        name="ticketPrice" required >
       </mat-form-field>
+
       <mat-form-field>
-        <input type="text" matInput placeholder="Workshop URL" [(ngModel)]="entry.url" #url="ngModel" name="url">
+        <input type="text" matInput placeholder="Workshop URL" 
+        [(ngModel)]="entry.url" #url="ngModel" name="url"
+        required [(pattern)]="urlPattern">
       </mat-form-field>
+
     </form>
   </mat-card-content>
   <mat-card-actions>
